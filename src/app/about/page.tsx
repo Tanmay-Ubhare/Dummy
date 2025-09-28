@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section for About */}
-      <section className="bg-gradient-to-br from-blue-600 to-teal-600 text-white py-20">
+      <section className="bg-gradient-hero text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">About Innovality</h1>
           <p className="text-xl sm:text-2xl font-medium max-w-3xl mx-auto">
