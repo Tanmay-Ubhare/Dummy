@@ -65,7 +65,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
+              className="ml-4 px-6 py-2 bg-gradient-to-r bg-gradient-hero text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
             >
               Get Started
             </Link>

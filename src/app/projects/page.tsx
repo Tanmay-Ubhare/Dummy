@@ -123,9 +123,9 @@ export default function Projects() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-secondary"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-secondary bg-white"
             />
-            <button className="px-6 py-3 bg-secondary hover:bg-teal-600 text-white font-semibold rounded-lg transition-colors duration-200">
+            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200">
               Subscribe
             </button>
           </div>

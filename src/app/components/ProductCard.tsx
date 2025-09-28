@@ -49,7 +49,7 @@ export default function ProductCard({ products, isPreview = false }: ProductCard
               {/* Main Card */}
               <div className="card-elevated bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-blue-200 transition-all duration-500 h-full">
                 {/* Header with gradient */}
-                <div className="relative bg-gradient-to-br from-blue-500 to-teal-500 p-8">
+                <div className="relative bg-gradient-hero p-8">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                   <div className="relative">
                     <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -100,7 +100,7 @@ export default function ProductCard({ products, isPreview = false }: ProductCard
                     </div>
                   )}
 
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group/btn">
+                  <button className="w-full bg-gradient-hero hover:from-blue-600 hover:to-teal-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group/btn">
                     <span className="flex items-center justify-center">
                       Learn More
                       <svg
@@ -132,7 +132,7 @@ export default function ProductCard({ products, isPreview = false }: ProductCard
           <div className="text-center mt-16 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <Link
               href="/products"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 bg-gradient-hero hover:from-blue-600 hover:to-teal-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group"
             >
               <span>View All Products & Services</span>
               <svg

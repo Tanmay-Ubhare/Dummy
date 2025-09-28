@@ -103,7 +103,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
                 <div className="text-center">
                   {/* Avatar */}
                   <div className="relative mx-auto mb-6">
-                    <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-32 h-32 bg-gradient-hero rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-lg group-hover:scale-105 transition-transform duration-300">
                       JD
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
