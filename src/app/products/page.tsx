@@ -12,7 +12,7 @@ export default function Products() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-20">
+      <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Products & Services</h1>
           <p className="text-xl sm:text-2xl font-medium max-w-3xl mx-auto">
@@ -28,8 +28,8 @@ export default function Products() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Service Categories</h2>
-            <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4">Service Categories</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We offer specialized services across multiple domains to meet diverse business needs
             </p>
@@ -53,13 +53,13 @@ export default function Products() {
                 features: ['24/7 Support', 'Performance Monitoring', 'Security Updates', 'Training & Documentation']
               }
             ].map((category, index) => (
-              <div key={index} className="bg-muted rounded-lg p-8 hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-primary mb-4">{category.title}</h3>
+              <div key={index} className="bg-blue-50 rounded-lg p-8 hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-blue-600 mb-4">{category.title}</h3>
                 <p className="text-gray-700 mb-6">{category.description}</p>
                 <ul className="space-y-2">
                   {category.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {feature}
@@ -73,7 +73,7 @@ export default function Products() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -82,13 +82,13 @@ export default function Products() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-secondary hover:bg-teal-600 text-white font-semibold rounded-lg transition-colors duration-200"
+              className="inline-flex items-center px-8 py-4 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 cursor-pointer"
             >
               Get Started Today
             </a>
             <a
               href="/projects"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary font-semibold rounded-lg transition-all duration-200"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-all duration-200 cursor-pointer"
             >
               View Our Projects
             </a>

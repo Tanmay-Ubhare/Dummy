@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-20">
+      <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Upcoming Projects</h1>
           <p className="text-xl sm:text-2xl font-medium max-w-3xl mx-auto">
@@ -28,8 +28,8 @@ export default function Projects() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Innovation Focus Areas</h2>
-            <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4">Innovation Focus Areas</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We are actively researching and developing solutions in cutting-edge technology domains
             </p>
@@ -62,13 +62,13 @@ export default function Projects() {
                 technologies: ['Quantum Algorithms', 'Quantum Cryptography', 'Optimization Problems', 'Quantum Simulation']
               }
             ].map((area, index) => (
-              <div key={index} className="bg-muted rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+              <div key={index} className="bg-blue-50 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
                 <div className="text-4xl mb-4 text-center">{area.icon}</div>
-                <h3 className="text-xl font-bold text-primary mb-3 text-center">{area.title}</h3>
+                <h3 className="text-xl font-bold text-blue-600 mb-3 text-center">{area.title}</h3>
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed">{area.description}</p>
                 <div className="space-y-1">
                   {area.technologies.map((tech, techIndex) => (
-                    <div key={techIndex} className="text-xs bg-white px-2 py-1 rounded text-secondary font-medium">
+                    <div key={techIndex} className="text-xs bg-white px-2 py-1 rounded text-blue-600 font-medium">
                       {tech}
                     </div>
                   ))}
@@ -80,15 +80,15 @@ export default function Projects() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Development Timeline</h2>
-            <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4">Development Timeline</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-secondary"></div>
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-500"></div>
             <div className="space-y-12">
               {[
                 { quarter: 'Q2 2025', title: 'Alpha Phase Launch', description: 'Initial testing and prototype development for Project Alpha' },
@@ -99,12 +99,12 @@ export default function Projects() {
                 <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
                     <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <h3 className="font-bold text-primary mb-1">{milestone.title}</h3>
-                      <p className="text-secondary text-sm font-medium mb-2">{milestone.quarter}</p>
+                      <h3 className="font-bold text-blue-600 mb-1">{milestone.title}</h3>
+                      <p className="text-blue-500 text-sm font-medium mb-2">{milestone.quarter}</p>
                       <p className="text-gray-600 text-sm">{milestone.description}</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white"></div>
                 </div>
               ))}
             </div>
@@ -113,7 +113,7 @@ export default function Projects() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated on Our Progress</h2>
           <p className="text-xl mb-8">
@@ -123,9 +123,9 @@ export default function Projects() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-secondary bg-white"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200">
+            <button className="px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 cursor-pointer">
               Subscribe
             </button>
           </div>

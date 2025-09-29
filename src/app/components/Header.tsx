@@ -36,15 +36,14 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <div className="relative w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+              <div className="relative w-10 h-10 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105" style={{backgroundColor: '#2563EB'}}>
                 <span className="text-white font-bold text-xl">I</span>
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="ml-3 flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                <span className="text-xl font-bold" style={{color: '#2563EB'}}>
                   Innovality
                 </span>
-                <span className="text-xs text-gray-500 -mt-1">Private Limited</span>
+                <span className="text-xs -mt-1" style={{color: '#6B7280'}}>Private Limited</span>
               </div>
             </Link>
           </div>
@@ -55,17 +54,19 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-gray-600 hover:text-blue-600 font-medium text-sm transition-all duration-300 rounded-lg hover:bg-gray-50 group"
+                className="relative px-4 py-2 font-medium text-sm transition-all duration-300 rounded-lg group hover:bg-blue-50 hover:text-blue-600"
+                style={{color: '#111827'}}
               >
                 {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-teal-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" style={{backgroundColor: '#2563EB'}}></span>
               </Link>
             ))}
             
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2 bg-gradient-to-r bg-gradient-hero text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
+              className="ml-4 px-6 py-2 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 hover:bg-blue-500"
+              style={{backgroundColor: '#2563EB'}}
             >
               Get Started
             </Link>
@@ -75,7 +76,8 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-300"
+              className="relative p-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600"
+              style={{color: '#111827'}}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 relative">
@@ -89,13 +91,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'}`}>
-          <div className="pt-4 border-t border-gray-200">
+          <div className="pt-4" style={{borderTop: '1px solid #DBEAFE'}}>
             <div className="flex flex-col space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-gray-50 font-medium text-sm transition-all duration-300 rounded-lg"
+                  className="px-4 py-3 font-medium text-sm transition-all duration-300 rounded-lg hover:bg-blue-50 hover:text-blue-600"
+                  style={{color: '#111827'}}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -103,7 +106,8 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mx-4 mt-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-semibold text-sm rounded-lg shadow-md text-center transition-all duration-300"
+                className="mx-4 mt-4 px-6 py-3 text-white font-semibold text-sm rounded-lg shadow-md text-center transition-all duration-300"
+                style={{backgroundColor: '#2563EB'}}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

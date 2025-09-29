@@ -20,26 +20,26 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Planning':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+        return 'bg-yellow-50 text-yellow-700 border-yellow-200';
       case 'In Progress':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-blue-50 text-blue-700 border-blue-200';
       case 'Coming Soon':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-purple-50 text-purple-700 border-purple-200';
       case 'Beta':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-green-50 text-green-700 border-green-200';
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return 'bg-gray-50 text-gray-700 border-gray-200';
     }
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4">
             Upcoming Projects
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Exciting initiatives and innovations in development to shape the future
           </p>
@@ -49,12 +49,12 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
           {displayProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
+              className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group hover:border-blue-300"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 border-b border-gray-200">
+              <div className="bg-blue-50 p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-secondary">
+                  <span className="text-sm font-medium text-blue-600">
                     {project.category}
                   </span>
                   <span
@@ -65,7 +65,7 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
                     {project.status}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors duration-200">
+                <h3 className="text-xl font-bold text-blue-600 mb-2 group-hover:text-blue-800 transition-colors duration-200">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-500">{project.timeline}</p>
@@ -94,7 +94,7 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
                     </svg>
                     {project.timeline}
                   </div>
-                  <button className="text-primary hover:text-secondary font-semibold text-sm transition-colors duration-200">
+                  <button className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors duration-200">
                     Stay Updated →
                   </button>
                 </div>
@@ -124,7 +124,7 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
           <div className="text-center mt-12">
             <Link
               href="/projects"
-              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-blue-800 text-white font-semibold rounded-lg transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-lg transition-colors duration-200 cursor-pointer"
             >
               View All Projects
               <svg
