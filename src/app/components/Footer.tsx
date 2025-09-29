@@ -1,10 +1,10 @@
 import Link from 'next/link';
+import { companyInfo } from '../../lib/data';
 
 export default function Footer() {
   const quickLinks = [
     { name: 'About', href: '/about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -125,7 +125,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-gray-300 text-sm">info@innovality.com</div>
+                  <div className="text-gray-300 text-sm">{companyInfo.contact.email}</div>
                 </div>
               </div>
               
@@ -136,7 +136,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-gray-300 text-sm">+91-9876543210</div>
+                  <div className="text-gray-300 text-sm">{companyInfo.contact.phone}</div>
                 </div>
               </div>
               
@@ -148,8 +148,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-300 text-sm leading-relaxed">
-                    123 Business Street<br />
-                    Mumbai, India
+                    {companyInfo.contact.address}
                   </div>
                 </div>
               </div>

@@ -96,9 +96,9 @@ export const companyInfo = {
   tagline: 'Driving technology and business transformation',
   description: 'Innovality Private Limited is an innovative solutions provider driving technology and business transformation. Our leadership team includes Mr. John Doe, CFO of Innovality Pvt. Ltd., who leads financial strategy and growth.',
   contact: {
-    email: 'info@innovality.com',
-    phone: '+91-9876543210',
-    address: '123 Business Street, Mumbai, India'
+    email: 'innovalityit@gmail.com',
+    phone: '+91-9892339356',
+    address: '705, The Crown, Plot No 35, sector 15 16, Kharghar, Navi Mumbai, 410210 Maharashtra, India'
   },
   cfo: {
     name: 'Mr. John Doe',
