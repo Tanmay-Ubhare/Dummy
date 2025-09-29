@@ -130,11 +130,11 @@ export default function ProductCard({ products, isPreview = false }: ProductCard
         {isPreview && (
           <div className="text-center mt-16 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <Link
-              href="/products"
+              href="/solutions"
               className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group hover:bg-blue-500 cursor-pointer"
               style={{backgroundColor: '#2563EB'}}
             >
-              <span>View All Products & Services</span>
+              <span>View All Solutions</span>
               <svg
                 className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
