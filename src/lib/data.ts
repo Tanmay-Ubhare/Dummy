@@ -92,9 +92,9 @@ export const projects = [
 
 // Company information
 export const companyInfo = {
-  name: 'Innovality Private Limited',
+  name: 'Innovality IT Private Ltd.',
   tagline: 'Driving technology and business transformation',
-  description: 'Innovality Private Limited is an innovative solutions provider driving technology and business transformation. Our leadership team includes Mr. John Doe, CFO of Innovality Pvt. Ltd., who leads financial strategy and growth.',
+  description: 'Innovality IT Private Ltd. is an innovative solutions provider driving technology and business transformation. Our leadership team includes Mr. John Doe, CFO of Innovality Pvt. Ltd., who leads financial strategy and growth.',
   contact: {
     email: 'innovalityit@gmail.com',
     phone: '+91-9892339356',

@@ -60,7 +60,7 @@ export default function Footer() {
               </div>
               <div className="ml-4">
                 <div className="text-xl font-bold text-white">
-                  Innovality Private Limited
+                  Innovality IT Private Ltd.
                 </div>
                 <div className="text-sm text-gray-400">Technology Solutions Provider</div>
               </div>

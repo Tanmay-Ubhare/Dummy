@@ -19,7 +19,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
             About Our Company
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6" style={{color: '#111827'}}>
-            Innovality Private Limited
+            Innovality IT Private Ltd.
           </h2>
           <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#2563EB'}}></div>
           <p className="text-xl max-w-3xl mx-auto mt-6 font-bold" style={{color: '#111827'}}>
@@ -32,7 +32,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
           <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <div className="prose prose-lg max-w-none">
               <p className="text-xl leading-relaxed mb-8 font-semibold" style={{color: '#111827'}}>
-                Innovality Private Limited is an innovative solutions provider driving technology 
+                Innovality IT Private Ltd. is an innovative solutions provider driving technology 
                 and business transformation across industries. We specialize in delivering 
                 cutting-edge solutions that empower organizations to thrive in the digital age.
               </p>
