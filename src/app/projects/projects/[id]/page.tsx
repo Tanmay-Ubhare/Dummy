@@ -269,39 +269,39 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 // Helper functions to generate project-specific content
 function getProjectFocus(projectId: string): string {
   const focuses: { [key: string]: string } = {
-    'project-alpha': 'Developing a revolutionary mobile platform that combines augmented reality, AI-powered personalization, and cross-platform compatibility to create seamless user experiences across all devices.',
-    'project-beta': 'Creating an enterprise-grade blockchain integration hub that enables secure smart contracts, decentralized applications, and cryptocurrency transactions with traditional business systems.',
-    'project-gamma': 'Building a comprehensive IoT management system that connects, monitors, and automates smart devices while providing real-time analytics and predictive maintenance capabilities.',
-    'project-delta': 'Researching quantum computing applications for complex business optimization, cryptographic security, and solving computationally intensive problems that classical computers cannot handle efficiently.',
+    'jyoti-dhara-ott': 'Building an OTT streaming experience with scalable delivery, curated content, and modern user experience.',
+    'ar-account-receivable': 'Improving invoicing, reconciliation, and collection processes with workflow and analytics for receivables.',
+    'bharat-smart-park-app': 'Creating a smart park companion app for discovery, ticketing, and guided experiences in public spaces.',
+    'legal-assistant-app': 'Designing an assistant to organize cases, documents, and deadlines for legal professionals.',
   };
   return focuses[projectId] || 'Advanced technology initiative focused on solving complex business challenges.';
 }
 
 function getProjectImpacts(projectId: string): string[] {
   const impacts: { [key: string]: string[] } = {
-    'project-alpha': [
-      'Enhanced mobile user engagement through AR integration',
-      'Cross-platform compatibility reducing development costs',
-      'AI-driven personalization improving user retention',
-      'Streamlined development process for mobile applications'
+    'jyoti-dhara-ott': [
+      'Scalable, reliable content delivery',
+      'Personalized discovery and recommendations',
+      'Modern, accessible viewing experience',
+      'Operational insights for content strategy'
     ],
-    'project-beta': [
-      'Secure and transparent business transactions',
-      'Reduced transaction costs and processing time',
-      'Enhanced trust through blockchain verification',
-      'New revenue streams through tokenization'
+    'ar-account-receivable': [
+      'Faster collections and reduced DSO',
+      'Improved reconciliation accuracy',
+      'Actionable receivables analytics',
+      'Streamlined workflows and controls'
     ],
-    'project-gamma': [
-      'Improved operational efficiency through automation',
-      'Predictive maintenance reducing downtime',
-      'Real-time monitoring and control of smart devices',
-      'Data-driven insights for better decision making'
+    'bharat-smart-park-app': [
+      'Better citizen engagement',
+      'Seamless ticketing and access',
+      'Guided experiences and safety',
+      'Operational visibility for park admins'
     ],
-    'project-delta': [
-      'Breakthrough solutions for complex optimization problems',
-      'Enhanced cryptographic security systems',
-      'Faster processing of computationally intensive tasks',
-      'Competitive advantage in emerging technology markets'
+    'legal-assistant-app': [
+      'Centralized case management',
+      'Time savings for routine tasks',
+      'Improved document organization',
+      'Deadline tracking and reminders'
     ],
   };
   return impacts[projectId] || ['Enhanced business capabilities', 'Improved operational efficiency', 'Competitive technology advantage'];
@@ -309,39 +309,31 @@ function getProjectImpacts(projectId: string): string[] {
 
 function getProjectTechnologies(projectId: string): string[] {
   const technologies: { [key: string]: string[] } = {
-    'project-alpha': ['React Native', 'AR/VR SDKs', 'TensorFlow', 'Node.js', 'GraphQL', 'Docker'],
-    'project-beta': ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'Node.js', 'PostgreSQL'],
-    'project-gamma': ['IoT Protocols', 'Edge Computing', 'Time Series DB', 'Machine Learning', 'Docker', 'Kubernetes'],
-    'project-delta': ['Quantum Algorithms', 'Qiskit', 'Python', 'Classical-Quantum Interfaces', 'Cloud Quantum Services'],
+    'jyoti-dhara-ott': ['Next.js', 'CDN', 'HLS/DASH', 'Node.js', 'PostgreSQL'],
+    'ar-account-receivable': ['React', 'Node.js', 'PostgreSQL', 'Workflow Engine', 'Analytics'],
+    'bharat-smart-park-app': ['React Native', 'Maps SDK', 'Payments', 'Node.js', 'PostgreSQL'],
+    'legal-assistant-app': ['Next.js', 'OCR', 'Vector Store', 'Node.js', 'PostgreSQL'],
   };
   return technologies[projectId] || ['Advanced Technologies', 'Cloud Computing', 'AI/ML'];
 }
 
 function getProjectMilestones(projectId: string) {
   const milestones: { [key: string]: Array<{title: string, description: string, date: string, completed: boolean}> } = {
-    'project-alpha': [
-      { title: 'Requirements Analysis', description: 'Complete analysis of mobile platform requirements', date: 'Q1 2025', completed: true },
-      { title: 'Architecture Design', description: 'System architecture and technology stack finalization', date: 'Q2 2025', completed: true },
-      { title: 'MVP Development', description: 'Minimum viable product with core features', date: 'Q3 2025', completed: false },
-      { title: 'Beta Testing', description: 'Limited release for beta testing and feedback', date: 'Q4 2025', completed: false },
+    'jyoti-dhara-ott': [
+      { title: 'Concept Design', description: 'Define core OTT experience and content strategy', date: 'TBA', completed: false },
+      { title: 'Delivery Pipeline', description: 'Plan streaming pipeline and encoding approach', date: 'TBA', completed: false },
     ],
-    'project-beta': [
-      { title: 'Blockchain Research', description: 'Research and select appropriate blockchain technology', date: 'Q2 2025', completed: false },
-      { title: 'Smart Contract Development', description: 'Core smart contract functionality', date: 'Q3 2025', completed: false },
-      { title: 'Integration Hub Development', description: 'Build integration hub for existing systems', date: 'Q4 2025', completed: false },
-      { title: 'Security Audit', description: 'Comprehensive security testing and audit', date: 'Q1 2026', completed: false },
+    'ar-account-receivable': [
+      { title: 'Process Mapping', description: 'Map AR workflows and controls', date: 'TBA', completed: false },
+      { title: 'Data Model', description: 'Define key entities and analytics structures', date: 'TBA', completed: false },
     ],
-    'project-gamma': [
-      { title: 'IoT Protocol Selection', description: 'Choose and implement IoT communication protocols', date: 'Q3 2025', completed: false },
-      { title: 'Device Management System', description: 'Core device connectivity and management', date: 'Q4 2025', completed: false },
-      { title: 'Analytics Platform', description: 'Real-time analytics and monitoring dashboard', date: 'Q1 2026', completed: false },
-      { title: 'Automation Engine', description: 'Intelligent automation and control system', date: 'Q2 2026', completed: false },
+    'bharat-smart-park-app': [
+      { title: 'Use Case Definition', description: 'Citizen journeys and park admin flows', date: 'TBA', completed: false },
+      { title: 'Payments & Access', description: 'Ticketing and access integration plan', date: 'TBA', completed: false },
     ],
-    'project-delta': [
-      { title: 'Quantum Algorithm Research', description: 'Research quantum algorithms for business applications', date: 'Q1 2025', completed: true },
-      { title: 'Proof of Concept', description: 'Develop proof of concept for quantum applications', date: 'Q2 2025', completed: true },
-      { title: 'Hybrid System Development', description: 'Classical-quantum hybrid computing system', date: 'Q3 2025', completed: false },
-      { title: 'Commercial Applications', description: 'Identify and develop commercial applications', date: 'Q4 2025', completed: false },
+    'legal-assistant-app': [
+      { title: 'Document Pipeline', description: 'OCR and organization pipeline outline', date: 'TBA', completed: false },
+      { title: 'Case View', description: 'Design for case-centric organization', date: 'TBA', completed: false },
     ],
   };
   return milestones[projectId] || [];
