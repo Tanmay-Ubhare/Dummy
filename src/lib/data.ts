@@ -1,10 +1,21 @@
+// Project types
+export type ProjectStatus = 'Planning' | 'In Progress' | 'Coming Soon' | 'Beta';
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  status: ProjectStatus;
+  timeline: string;
+  category: string;
+};
+
 // Dummy data for upcoming projects
-export const projects = [
+export const projects: Project[] = [
   {
     id: 'jyoti-dhara-ott',
     title: 'Jyoti Dhara - OTT',
     description: 'An over-the-top (OTT) streaming platform initiative to deliver curated video content with modern UX and scalable delivery.',
-    status: 'Coming Soon' as const,
+    status: 'Coming Soon',
     timeline: 'TBA',
     category: 'Media & Streaming'
   },
@@ -12,7 +23,7 @@ export const projects = [
     id: 'ar-account-receivable',
     title: 'AR - Account Receivable Software',
     description: 'A finance-focused Accounts Receivable application for invoice tracking, reconciliation, and collections analytics.',
-    status: 'Coming Soon' as const,
+    status: 'Coming Soon',
     timeline: 'TBA',
     category: 'FinTech'
   },
@@ -20,7 +31,7 @@ export const projects = [
     id: 'bharat-smart-park-app',
     title: 'Bharat Smart Park App',
     description: 'Smart park mobile app concept for discovery, ticketing, and guided experiences across parks and public spaces.',
-    status: 'Coming Soon' as const,
+    status: 'Coming Soon',
     timeline: 'TBA',
     category: 'Smart City / Civic'
   },
@@ -28,7 +39,7 @@ export const projects = [
     id: 'legal-assistant-app',
     title: 'Legal Assistant App',
     description: 'An AI-augmented assistant concept to help legal professionals organize cases, documents, and deadlines.',
-    status: 'Coming Soon' as const,
+    status: 'Coming Soon',
     timeline: 'TBA',
     category: 'LegalTech'
   }
