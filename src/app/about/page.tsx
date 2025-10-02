@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import AboutCard from '../components/AboutCard';
+import TeamContacts from '../components/TeamContacts';
 
 export const metadata: Metadata = {
   title: 'About Us - Innovality Private Limited',
@@ -83,6 +84,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Team Contacts from business card(s) */}
+      <TeamContacts />
     </div>
   );
 }

@@ -1,10 +1,18 @@
 import Link from 'next/link';
+import { companyInfo } from '../../lib/data';
 
 interface AboutCardProps {
   isPreview?: boolean;
 }
 
 export default function AboutCard({ isPreview = false }: AboutCardProps) {
+  const cfo = companyInfo.cfo;
+  const initials = cfo.name
+    .split(' ')
+    .filter(Boolean)
+    .map((w) => w[0]?.toUpperCase())
+    .slice(0, 2)
+    .join('') || 'IN';
   return (
     <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#DBEAFE'}}>
       {/* Background decoration */}
@@ -19,7 +27,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
             About Our Company
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6" style={{color: '#111827'}}>
-            Innovality IT Private Ltd.
+            Innovality IT Private Limited
           </h2>
           <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#2563EB'}}></div>
           <p className="text-xl max-w-3xl mx-auto mt-6 font-bold" style={{color: '#111827'}}>
@@ -32,7 +40,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
           <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <div className="prose prose-lg max-w-none">
               <p className="text-xl leading-relaxed mb-8 font-semibold" style={{color: '#111827'}}>
-                Innovality IT Private Ltd. is an innovative solutions provider driving technology 
+                Innovality IT Private Limited is an innovative solutions provider driving technology 
                 and business transformation across industries. We specialize in delivering 
                 cutting-edge solutions that empower organizations to thrive in the digital age.
               </p>
@@ -102,7 +110,7 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
                   {/* Avatar */}
                   <div className="relative mx-auto mb-6">
                     <div className="w-32 h-32 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold shadow-lg group-hover:scale-105 transition-transform duration-300" style={{backgroundColor: '#2563EB'}}>
-                      JD
+                      {initials}
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center shadow-lg" style={{backgroundColor: '#2563EB'}}>
                       <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -113,33 +121,29 @@ export default function AboutCard({ isPreview = false }: AboutCardProps) {
                   
                   {/* Profile Info */}
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold mb-2" style={{color: '#2563EB'}}>Mr. John Doe</h3>
-                    <p className="font-semibold text-lg mb-1" style={{color: '#111827'}}>Chief Financial Officer</p>
+                    <h3 className="text-2xl font-bold mb-2" style={{color: '#2563EB'}}>{cfo.name}</h3>
+                    <p className="font-semibold text-lg mb-1" style={{color: '#111827'}}>{cfo.title}</p>
                     <div className="flex items-center justify-center space-x-4 text-sm" style={{color: '#6B7280'}}>
                       <span className="flex items-center">
                         <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-2a1 1 0 00-1 1v1h2V5a1 1 0 00-1-1z" clipRule="evenodd" />
                         </svg>
-                        15+ Years Experience
+                        {cfo.experience} Experience
                       </span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                    Mr. John Doe leads our financial strategy and growth initiatives. 
-                    With over 15 years of experience in corporate finance and strategic planning, 
-                    he drives our company&apos;s financial excellence and sustainable expansion.
-                  </p>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-6">{cfo.description}</p>
                   
                   {!isPreview && (
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="bg-white p-4 rounded-xl border" style={{borderColor: '#E5E7EB'}}>
                         <div className="font-semibold mb-1" style={{color: '#2563EB'}}>Experience</div>
-                        <div style={{color: '#6B7280'}}>15+ Years</div>
+                        <div style={{color: '#6B7280'}}>{cfo.experience}</div>
                       </div>
                       <div className="bg-white p-4 rounded-xl border" style={{borderColor: '#E5E7EB'}}>
                         <div className="font-semibold mb-1" style={{color: '#2563EB'}}>Specialization</div>
-                        <div style={{color: '#6B7280'}}>Financial Strategy</div>
+                        <div style={{color: '#6B7280'}}>{cfo.specialization}</div>
                       </div>
                     </div>
                   )}

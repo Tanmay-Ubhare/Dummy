@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { products, projects } from '../../lib/data';
+import { projects } from '../../lib/data';
 
 export const metadata: Metadata = {
-  title: 'Solutions - Innovality Private Limited',
-  description: 'Discover our comprehensive range of products, services, and upcoming projects including digital transformation, AI-powered analytics, blockchain solutions, and more.',
-  keywords: 'solutions, products, services, projects, digital transformation, AI analytics, blockchain, IoT, quantum computing',
+  title: 'Projects - Innovality Private Limited',
+  description: 'Explore Innovality IT Private Limited projects in progress and on the roadmap, featuring mobile, blockchain, IoT, and quantum initiatives.',
+  keywords: 'projects, innovation, roadmap, digital transformation, AI analytics, blockchain, IoT, quantum computing',
 };
 
 export default function Solutions() {
@@ -29,70 +29,10 @@ export default function Solutions() {
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Solutions</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Upcoming Projects</h1>
           <p className="text-xl sm:text-2xl font-medium max-w-3xl mx-auto">
-            Comprehensive products, services, and innovative projects designed to transform your business
+            Innovation in progress across mobility, blockchain, IoT, and quantum technology
           </p>
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-4">Products & Services</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready-to-use solutions that accelerate your digital transformation journey
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 overflow-hidden group"
-              >
-                {/* Header */}
-                <div className="bg-blue-50 p-6 border-b border-gray-200">
-                  <div className="flex items-center mb-4">
-                    <div className="text-3xl mr-4">{product.icon}</div>
-                    <div>
-                      <h3 className="text-xl font-bold text-blue-600 mb-2 group-hover:text-blue-800 transition-colors duration-200">
-                        {product.title}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">{product.description}</p>
-                </div>
-
-                {/* Features */}
-                <div className="p-6">
-                  <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-600">
-                        <svg className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link
-                    href={`/solutions/products/${product.id}`}
-                    className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-lg transition-colors duration-200 cursor-pointer"
-                  >
-                    Learn More
-                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -157,7 +97,7 @@ export default function Solutions() {
                       {project.timeline}
                     </div>
                     <Link
-                      href={`/solutions/projects/${project.id}`}
+                      href={`/projects/projects/${project.id}`}
                       className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors duration-200 cursor-pointer"
                     >
                       Learn More →

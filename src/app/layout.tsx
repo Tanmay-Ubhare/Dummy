@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Innovality Private Limited",
+  title: "Innovality IT Private Ltd.",
   description: "Innovative solutions provider driving technology and business transformation across industries.",
   keywords: "technology, business transformation, digital solutions, consulting, innovation",
   authors: [{ name: "Innovality Private Limited" }],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   publisher: "Innovality Private Limited",
   robots: "index, follow",
   openGraph: {
-    title: "Innovality Private Limited",
+    title: "Innovality IT Private Ltd.",
     description: "Innovative solutions provider driving technology and business transformation across industries.",
     type: "website",
     locale: "en_US",

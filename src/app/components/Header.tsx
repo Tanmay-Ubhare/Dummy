@@ -18,7 +18,7 @@ export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -42,7 +42,7 @@ export default function Header() {
                 <span className="text-xl font-bold" style={{color: '#2563EB'}}>
                   Innovality
                 </span>
-                <span className="text-xs -mt-1" style={{color: '#6B7280'}}>IT Private Ltd.</span>
+                <span className="text-xs -mt-1" style={{color: '#6B7280'}}>IT Private Limited</span>
               </div>
             </Link>
           </div>

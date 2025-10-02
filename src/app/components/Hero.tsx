@@ -34,7 +34,7 @@ export default function Hero() {
               Innovality
             </span>
             <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2" style={{color: '#3B82F6'}}>
-              IT Private Ltd.
+              IT Private Limited.
             </span>
           </h1>
           

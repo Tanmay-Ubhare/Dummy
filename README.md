@@ -35,10 +35,10 @@ src/
 │   │   ├── Footer.tsx       # Site footer
 │   │   ├── Hero.tsx         # Hero section
 │   │   ├── AboutCard.tsx    # About section with CFO profile
-│   │   ├── ProductCard.tsx  # Product/service cards
+│   │   ├── ProductCard.tsx  # Deprecated (products removed)
 │   │   └── ProjectCard.tsx  # Project showcase cards
 │   ├── about/              # About page
-│   ├── products/           # Products & Services page
+│   ├── products/           # Deprecated
 │   ├── projects/           # Upcoming Projects page
 │   ├── contact/            # Contact page
 │   ├── layout.tsx          # Root layout
@@ -100,27 +100,20 @@ npm run lint
 
 ## 📄 Pages
 
-1. **Home (/)**: Hero, About preview, Products preview, Projects preview
+1. **Home (/)**: Hero, About preview, Projects preview
 2. **About (/about)**: Full company description, CFO profile, mission/vision, values
-3. **Products (/products)**: All products/services with detailed information
+3. ~~Products (/products)~~: Removed
 4. **Projects (/projects)**: Upcoming projects with timelines and status
 5. **Contact (/contact)**: Contact information and inquiry form
 
 ## 📊 Content Management
 
 ### Adding New Products
-Edit `src/lib/data.ts` and add to the `products` array:
 
-```typescript
-{
-  id: 'new-product',
-  title: 'Product Name',
-  description: 'Product description...',
-  features: ['Feature 1', 'Feature 2'],
-  icon: '🆕'
-}
-```
+Products catalog has been removed; no longer supported.
 
+ 
+ 
 ### Adding New Projects
 Edit `src/lib/data.ts` and add to the `projects` array:
 
@@ -152,6 +145,8 @@ Edit `src/lib/data.ts` and add to the `projects` array:
 
 ## 🔧 Customization
 
+ 
+ 
 ### Colors
 Update colors in `tailwind.config.ts`:
 
@@ -163,22 +158,31 @@ colors: {
 }
 ```
 
+ 
+ 
 ### Fonts
 Modify fonts in `globals.css` or `tailwind.config.ts`
 
+ 
+ 
 ### Content
 All content can be managed through:
-- `src/lib/data.ts` for products, projects, and company info
+ 
+- `src/lib/data.ts` for projects and company info
 - Individual page components for static content
 
 ## 🚀 Deployment
 
+ 
 ### Vercel (Recommended)
+ 
 1. Push to GitHub repository
 2. Connect to Vercel
 3. Deploy automatically
 
+ 
 ### Other Platforms
+ 
 ```bash
 npm run build
 npm start
@@ -187,6 +191,7 @@ npm start
 ## 📞 Support
 
 For questions about this website implementation:
+ 
 - Check Next.js documentation: [nextjs.org](https://nextjs.org)
 - Tailwind CSS docs: [tailwindcss.com](https://tailwindcss.com)
 

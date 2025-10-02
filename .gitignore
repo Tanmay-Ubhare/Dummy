@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# products directory
+/src/app/products
+
+#Vs Code directory
+.vscode/

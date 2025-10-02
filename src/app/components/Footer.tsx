@@ -4,7 +4,7 @@ import { companyInfo } from '../../lib/data';
 export default function Footer() {
   const quickLinks = [
     { name: 'About', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -60,7 +60,7 @@ export default function Footer() {
               </div>
               <div className="ml-4">
                 <div className="text-xl font-bold text-white">
-                  Innovality IT Private Ltd.
+                  Innovality IT Private Limited.
                 </div>
                 <div className="text-sm text-gray-400">Technology Solutions Provider</div>
               </div>

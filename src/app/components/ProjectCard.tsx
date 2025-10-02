@@ -123,10 +123,10 @@ export default function ProjectCard({ projects, isPreview = false }: ProjectCard
         {isPreview && (
           <div className="text-center mt-12">
             <Link
-              href="/solutions"
+              href="/projects"
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-lg transition-colors duration-200 cursor-pointer"
             >
-              View All Solutions
+              View All Projects
               <svg
                 className="ml-2 h-4 w-4"
                 fill="none"

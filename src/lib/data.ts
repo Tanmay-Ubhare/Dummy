@@ -1,59 +1,3 @@
-// Dummy data for products and services
-export const products = [
-  {
-    id: 'product-a',
-    title: 'Product A - Digital Transformation Suite',
-    description: 'Comprehensive digital transformation platform designed to modernize legacy systems and streamline business processes.',
-    features: [
-      'Cloud-native architecture',
-      'Real-time analytics dashboard',
-      'API integration capabilities',
-      'Security compliance framework',
-      '24/7 monitoring and support'
-    ],
-    icon: '🚀'
-  },
-  {
-    id: 'product-b',
-    title: 'Product B - AI-Powered Analytics',
-    description: 'Advanced artificial intelligence platform that provides predictive insights and automated decision-making capabilities.',
-    features: [
-      'Machine learning algorithms',
-      'Predictive modeling',
-      'Automated reporting',
-      'Data visualization tools',
-      'Custom AI model training'
-    ],
-    icon: '🤖'
-  },
-  {
-    id: 'product-c',
-    title: 'Product C - Cloud Infrastructure Solutions',
-    description: 'Scalable cloud infrastructure services providing secure, reliable, and cost-effective hosting solutions.',
-    features: [
-      'Multi-cloud deployment',
-      'Auto-scaling capabilities',
-      'Disaster recovery systems',
-      'Performance optimization',
-      'Cost management tools'
-    ],
-    icon: '☁️'
-  },
-  {
-    id: 'product-d',
-    title: 'Enterprise Security Platform',
-    description: 'Comprehensive cybersecurity solution protecting businesses from modern threats with advanced monitoring.',
-    features: [
-      'Threat detection and response',
-      'Identity access management',
-      'Security compliance auditing',
-      'Incident response automation',
-      'Risk assessment tools'
-    ],
-    icon: '🛡️'
-  }
-];
-
 // Dummy data for upcoming projects
 export const projects = [
   {
@@ -94,17 +38,59 @@ export const projects = [
 export const companyInfo = {
   name: 'Innovality IT Private Ltd.',
   tagline: 'Driving technology and business transformation',
-  description: 'Innovality IT Private Ltd. is an innovative solutions provider driving technology and business transformation. Our leadership team includes Mr. John Doe, CFO of Innovality Pvt. Ltd., who leads financial strategy and growth.',
+  description: 'Innovality IT Private Ltd. is an innovative solutions provider driving technology and business transformation.',
   contact: {
     email: 'innovalityit@gmail.com',
-    phone: '+91-9892339356',
-    address: '705, The Crown, Plot No 35, sector 15 16, Kharghar, Navi Mumbai, 410210 Maharashtra, India'
+    phone: '+91 98923 39356',
+    address: '705, The Crown, Plot No. 35, Sector - 15, Kharghar, Navi Mumbai - 410 210, MH. India'
   },
   cfo: {
-    name: 'Mr. John Doe',
+    name: 'Kedar Khairnar',
     title: 'Chief Financial Officer',
-    description: 'Mr. John Doe leads our financial strategy and growth initiatives. With over 15 years of experience in corporate finance and strategic planning, he drives our company\'s financial excellence and sustainable expansion.',
-    experience: '15+ Years',
+    description: 'Kedar Khairnar currently serves as the CFO at Innovality IT Private Ltd., overseeing financial strategy, planning, and governance.',
+    experience: '—',
     specialization: 'Financial Strategy'
   }
 };
+
+// Optional team/business card contacts
+export type Contact = {
+  name: string;
+  title: string; // keep blank titles as requested
+  email: string;
+  phone: string;
+  address: string;
+};
+
+// Populate this array with details from the business card(s).
+// Titles should remain blank strings per requirement.
+export const contacts: Contact[] = [
+  {
+    name: 'Sajjan Gaikar',
+    title: '',
+    email: 'innovalityit@gmail.com',
+    phone: '+91 79 7779 9854',
+    address: '705, The Crown, Plot No. 35, Sector - 15, Kharghar, Navi Mumbai - 410 210, MH. India',
+  },
+  {
+    name: 'Avinash Vyawahare',
+    title: '',
+    email: 'innovalityit@gmail.com',
+    phone: '+91 98709 99207',
+    address: '705, The Crown, Plot No. 35, Sector - 15, Kharghar, Navi Mumbai - 410 210, MH. India',
+  },
+  {
+    name: 'Adv. Parambodh Jain',
+    title: '',
+    email: 'innovalityit@gmail.com',
+    phone: '+91 93233 33323',
+    address: '705, The Crown, Plot No. 35, Sector - 15, Kharghar, Navi Mumbai - 410 210, MH. India',
+  },
+  {
+    name: 'Kedar Khairnar',
+    title: '',
+    email: 'innovalityit@gmail.com',
+    phone: '+91 98923 39356',
+    address: '705, The Crown, Plot No. 35, Sector - 15, Kharghar, Navi Mumbai - 410 210, MH. India',
+  },
+];

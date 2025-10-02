@@ -36,6 +36,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
+  // At this point, project is guaranteed to exist
+  const proj = project!;
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Planning':
@@ -71,37 +74,31 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center mb-6">
+          <div className="flex items-center justify-between mb-6">
             <Link 
-              href="/solutions" 
-              className="text-blue-300 hover:text-white transition-colors duration-200 flex items-center mr-4"
+              href="/projects" 
+              className="text-blue-300 hover:text-white transition-colors duration-200 flex items-center"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Solutions
+              Back to Projects
             </Link>
           </div>
-          
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center">
-              <div className="text-6xl mr-6">{getStatusIcon(project.status)}</div>
-              <div>
-                <div className="flex items-center mb-4">
-                  <span className="text-sm font-medium text-blue-300 mr-4">{project.category}</span>
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(
-                      project.status
-                    )}`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-4">{project.title}</h1>
-                <p className="text-xl sm:text-2xl font-medium text-blue-100">
-                  {project.description}
-                </p>
-              </div>
+          <div className="flex items-center">
+            <div className="text-6xl mr-6">{getStatusIcon(proj.status)}</div>
+            <div>
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(
+                  proj.status
+                )}`}
+              >
+                {proj.status}
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-4">{proj.title}</h1>
+              <p className="text-xl sm:text-2xl font-medium text-blue-100">
+                {proj.description}
+              </p>
             </div>
           </div>
           
@@ -109,7 +106,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Timeline: {project.timeline}
+            Timeline: {proj.timeline}
           </div>
         </div>
       </section>
@@ -127,14 +124,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-blue-600 mb-3">Innovation Focus</h3>
                   <p className="text-gray-700">
-                    {getProjectFocus(project.id)}
+                    {getProjectFocus(proj.id)}
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">Expected Impact</h3>
                   <ul className="space-y-2 text-gray-700">
-                    {getProjectImpacts(project.id).map((impact, index) => (
+                    {getProjectImpacts(proj.id).map((impact, index) => (
                       <li key={index} className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -148,7 +145,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="bg-yellow-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-yellow-700 mb-3">Key Technologies</h3>
                   <div className="flex flex-wrap gap-2">
-                    {getProjectTechnologies(project.id).map((tech, index) => (
+                    {getProjectTechnologies(proj.id).map((tech, index) => (
                       <span key={index} className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full">
                         {tech}
                       </span>
@@ -167,21 +164,21 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-gray-600">Project Progress</span>
                   <span className="text-sm font-medium text-blue-600">
-                    {getProgressPercentage(project.status)}%
+                    {getProgressPercentage(proj.status)}%
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all duration-300 ${
-                      project.status === 'Planning'
+                      proj.status === 'Planning'
                         ? 'bg-yellow-500'
-                        : project.status === 'In Progress'
+                        : proj.status === 'In Progress'
                         ? 'bg-blue-500'
-                        : project.status === 'Beta'
+                        : proj.status === 'Beta'
                         ? 'bg-green-500'
                         : 'bg-purple-500'
                     }`}
-                    style={{ width: `${getProgressPercentage(project.status)}%` }}
+                    style={{ width: `${getProgressPercentage(proj.status)}%` }}
                   ></div>
                 </div>
               </div>
@@ -189,7 +186,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               {/* Milestones */}
               <div className="space-y-4 mb-8">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Key Milestones</h3>
-                {getProjectMilestones(project.id).map((milestone, index) => (
+                {getProjectMilestones(proj.id).map((milestone, index) => (
                   <div key={index} className="flex items-start space-x-4 p-4 border-l-4 border-blue-500 bg-blue-50">
                     <div className="flex-shrink-0">
                       <div className={`w-3 h-3 rounded-full ${milestone.completed ? 'bg-green-500' : 'bg-gray-300'}`}></div>
@@ -217,10 +214,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     Get Updates
                   </Link>
                   <Link
-                    href="/solutions"
+                    href="/projects"
                     className="inline-flex items-center px-6 py-3 border-2 border-blue-300 text-blue-100 hover:bg-blue-500 font-semibold rounded-lg transition-colors duration-200 cursor-pointer"
                   >
-                    View All Solutions
+                    View All Projects
                   </Link>
                 </div>
               </div>
@@ -238,10 +235,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {projects.filter(p => p.id !== project.id).slice(0, 3).map((relatedProject) => (
+            {projects.filter(p => p.id !== proj.id).slice(0, 3).map((relatedProject) => (
               <Link
                 key={relatedProject.id}
-                href={`/solutions/projects/${relatedProject.id}`}
+                href={`/projects/projects/${relatedProject.id}`}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-3">
